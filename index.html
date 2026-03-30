@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Test</title>
+</head>
+<body>
+
+<h2>Online Quiz</h2>
+
+<form id="quizForm"></form>
+
+<button onclick="submitQuiz()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+let correctAnswers = [];
+
+fetch("questions.xml")
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "text/xml");
+
+    const questions = xml.getElementsByTagName("question");
+    const form = document.getElementById("quizForm");
+
+    for (let i = 0; i < questions.length; i++) {
+      let qText = questions[i].getElementsByTagName("text")[0].textContent;
+      let options = questions[i].getElementsByTagName("option");
+      let answer = questions[i].getElementsByTagName("answer")[0].textContent;
+
+      correctAnswers.push(answer);
+
+      let html = `<p>${i + 1}. ${qText}</p>`;
+
+      for (let j = 0; j < options.length; j++) {
+        let opt = options[j].textContent;
+        html += `
+          <input type="radio" name="q${i}" value="${opt}"> ${opt}<br>
+        `;
+      }
+
+      form.innerHTML += html + "<br>";
+    }
+  });
+
+function submitQuiz() {
+  let score = 0;
+
+  for (let i = 0; i < correctAnswers.length; i++) {
+    let selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected && selected.value === correctAnswers[i]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerText = 
+    "Your Score: " + score + "/" + correctAnswers.length;
+}
+</script>
+
+</body>
+</html>
