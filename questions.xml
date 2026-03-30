@@ -1,0 +1,19 @@
+<quiz>
+  <question>
+    <text>What is the capital of India?</text>
+    <option>Delhi</option>
+    <option>Mumbai</option>
+    <option>Kolkata</option>
+    <option>Chennai</option>
+    <answer>Delhi</answer>
+  </question>
+
+  <question>
+    <text>2 + 2 = ?</text>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <answer>4</answer>
+  </question>
+</quiz>
