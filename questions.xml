@@ -1,19 +1,91 @@
 <quiz>
   <question>
-    <text>What is the capital of India?</text>
-    <option>Delhi</option>
-    <option>Mumbai</option>
-    <option>Kolkata</option>
-    <option>Chennai</option>
-    <answer>Delhi</answer>
+    <text>What is a Series in Pandas?</text>
+    <option>2D array</option>
+    <option>1D labeled array</option>
+    <option>Dictionary</option>
+    <option>Tuple</option>
+    <answer>1D labeled array</answer>
   </question>
 
   <question>
-    <text>2 + 2 = ?</text>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <answer>4</answer>
+    <text>Which function is used to create a Series?</text>
+    <option>pandas.array()</option>
+    <option>pandas.Series()</option>
+    <option>pandas.create()</option>
+    <option>pandas.list()</option>
+    <answer>pandas.Series()</answer>
+  </question>
+
+  <question>
+    <text>What will be the default index if not specified?</text>
+    <option>1,2,3...</option>
+    <option>0,1,2...</option>
+    <option>a,b,c...</option>
+    <option>No index</option>
+    <answer>0,1,2...</answer>
+  </question>
+
+  <question>
+    <text>Which library is required to create Series from ndarray?</text>
+    <option>Matplotlib</option>
+    <option>Seaborn</option>
+    <option>NumPy</option>
+    <option>SciPy</option>
+    <answer>NumPy</answer>
+  </question>
+
+  <question>
+    <text>In dictionary-based Series, what becomes the index?</text>
+    <option>Values</option>
+    <option>Keys</option>
+    <option>Both</option>
+    <option>None</option>
+    <answer>Keys</answer>
+  </question>
+
+  <question>
+    <text>What happens when index has extra labels not in dictionary?</text>
+    <option>Error</option>
+    <option>Ignored</option>
+    <option>Assigned NaN</option>
+    <option>Assigned 0</option>
+    <answer>Assigned NaN</answer>
+  </question>
+
+  <question>
+    <text>How is scalar value handled in Series?</text>
+    <option>Stored once</option>
+    <option>Repeated for each index</option>
+    <option>Error</option>
+    <option>Converted to list</option>
+    <answer>Repeated for each index</answer>
+  </question>
+
+  <question>
+    <text>Which of the following is valid Series creation?</text>
+    <option>pd.Series([1,2,3])</option>
+    <option>pd.Series({1,2,3})</option>
+    <option>pd.Series(1,2,3)</option>
+    <option>pd.Series()</option>
+    <answer>pd.Series([1,2,3])</answer>
+  </question>
+
+  <question>
+    <text>What data type is assigned if NaN is present?</text>
+    <option>int</option>
+    <option>float</option>
+    <option>str</option>
+    <option>bool</option>
+    <answer>float</answer>
+  </question>
+
+  <question>
+    <text>Which parameter is used to assign custom labels?</text>
+    <option>labels</option>
+    <option>index</option>
+    <option>keys</option>
+    <option>axis</option>
+    <answer>index</answer>
   </question>
 </quiz>
